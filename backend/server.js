@@ -11,6 +11,8 @@ const categoryRoutes = require('./routes/categories');
 const mlRoutes = require('./routes/ml');
 const adRoutes = require('./routes/ads');
 const messageRoutes = require('./routes/messages');
+const aiRoutes = require('./routes/ai');
+
 
 // Initialize express
 const app = express();
@@ -40,6 +42,7 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/ml', mlRoutes);
 app.use('/api/ads', adRoutes);
 app.use('/api/messages', messageRoutes);
+app.use('/api/ai', aiRoutes); 
 
 // Health check
 app.get('/api/health', (req, res) => {
